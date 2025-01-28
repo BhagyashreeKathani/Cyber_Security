@@ -1,0 +1,87 @@
+Network Scanning Tools And Methods
+
+1)Nmap(Network Mapper) : This tool  is an open-source network vulnerability scanner used to discover hosts and services on a computer network, thus creating a “map” of the network. Nmap can also detect vulnerabilities in networked systems by performing various types of scans, including port scans, version detection scans, and vulnerability scans.
+Key Features:
+•	Service version detection
+•	Operating system fingerprinting
+•	Vulnerability detection using the Nmap Scripting Engine
+
+2)Wireshark : This tools is widely used network protocol analyze network traffic which useful for troubleshooting,security analysis and understanding network protocols.This powerfull  tool for both network administrators and security professionals providing deep visibility into network traffic.
+Key Features:
+•	Network Troubleshooting to identify slow network performance.
+•	Security monitoring like to detect unauthorized activity.
+•	Protocol development to helps developers understand how network protocols work.
+
+3) Nessus : This tools is used vulnerability scanner that scans security in devices,applications,operating systems,cloud services and other network resources.This tools is free version of a vulnerability assessment solution.
+Key Features:
+•	Nessus scan plugin-based system where each plugin is designed to check for specific vulnerabilities.
+•	This tools is continuosly updated with latest vulnerability plugins and signatures.
+•	Nessus is also used in authentication scans by logging into systems with provided credentials.
+
+4) Masscan : Masscan is designed for fast scanning of large networks. While faster than Nmap, it lacks the detailed scanning capabilities that Nmap offers.
+Key Features:
+•	Fast port scanning
+•	Ideal for large networks or scanning large IP ranges
+
+5)Angry IP Scanner : A lightweight tool for quick IP address scanning. It is best suited for basic network discovery tasks but doesn’t offer vulnerability scanning.
+Key Features:
+•	Simple interface best for smaller networks.
+•	Ability to detect live hosts and open ports.
+
+Refrences: Nmap (Network Mapper)
+                     Wireshark
+                      Nessus
+                      Masscan
+                      Angry IP Scanner
+
+     Methods of network scanning
+• Packet Sniffing: Captures network traffic (packets) to analyze and identify issues or potential attacks.
+• Protocol Analysis: Breaks down captured packets by protocol (like HTTP, TCP, DNS) to provide insights into communication between devices.
+• Filtering: Allows the user to focus on specific traffic types or protocols.
+• Statistics: Provides detailed statistics and graphs on network traffic, errors, and performance. 
+• Port Scanning(nmap -p) : It identifies open ports and services on a target devices. The scanner sends packets to a range of ports and analyzes the responses.
+• Ping Sweep(nmap -sn) : It identifies live host in network by sending echo request to a range of IP addresses. The scanner sends a ping to each device on a given range.
+• Service Version Detection (nmap -sV) :  It identify version numbers of services running on open ports.
+•  OS Detection(nmap -o) : It identify the operating system of the machine.
+• TCP Connect : It scans TCP connections .
+                    Script Scanning to Identify Vulnerabilities
+	Burp Suite (Web Application Scanning): Burp Suite is automated and manual vulanerability scanning for web applications.Such as SQL Injection, Cross-Site Scripting and user can also use Burp Extender API. This suite consists of different tools, such as a proxy server, a web spider, intruder and repeater and also this tool is java application can used to secure.
+
+	Nikto (Web Server Scanning): Nikto is open source web server scanner,that run a set of script to identify such as outdated software and misconfigurations.This tool provide detailed output for each detected issue.
+
+	WPScan(WordPress vulnerability Scanner) : This tool used for scanning wordpress websites and installations for vulnerabilities.To detects outdated plugins and themes , identifies security issues like weak password , hidden files. Extensive database of known vulnerabilities related to wordpress. 
+
+	Nessus(plugin-based Scripting) : This tool is used for plugins to perform scans for known vulnerabilities ,security issues in system and applications. This tool scan wide range of vulnerabilities and plugins are continuously updated to reflect the latest vulnerabilities.
+	Metasploit Framework : Metasploit Framework is a penetration testing tool that includes exploit script to hacks on systems and identify vulnerabilities. This tool allows automation of attacks and post-exploitation script and also integration with other security and APIs. 
+	QualysGuard(Cloud-based Vulnerability Scanning) : This tool scans cloud-based vulnerability  management platform .It supports automated vulnerability assessments using script-based templates , it uses script-based scanning to detect a wide range of vulnerabilities and continuous monitoring.
+	SpiderFoot(Automated OSINT Tool) : This scanning tool is open source tool, that automated gathering of intelligence from a variety of online sources and detect security misconfigurations and weak points.
+
+
+References: 
+Burp Suite: Official Website
+Nikto: Official Website
+WPScan: Official Website
+Nessus: Official Website
+Metasploit Framework: Official Website
+QualysGuard: Official Website
+
+
+Tools and Techniques for network traffic
+
+1)	 Wireshark: This tool is used to analyze network packets and also it allows to see all the details of these packets in real-time. Where wireshark breaks packets into their components such as source, destination addresses, protocols(ex: HTTP,DNS,FTP) and actual data will be transmitted. Wireshark is invaluable deep inspect of network traffic.
+2) Tcpdump : This is a command-line tool similar to wireshark tool but tcpdump is used simpler, quick inspects of network traffic where this tool is passing through a network interface and displays in a human-readable format. Tcpdump is lightweight fast where used in troubleshooting a server’s connection issues. 
+3) Deep Packet Inspection(DPI) : DPI is capturing packets it inspects their entire content including the data payload to detect potential threats. DPI is identify more advanced security threats, such as hidden malware/unauthorized data transfer , in penetration test on web application DPI can help to identify if hackers are trying to exploit a vulnerability in HTTP or SSL/TLS protocols.
+4)Protocol Analysis : It helps to identify misconfigured protocols or vulnerabilities within the protocols . A web server is using an outdated or vulnerable version of SSL/TLS for encryption, protocol analysis would help identify the issue and allow you to upgrade the server to a more secure version.
+
+
+5) SNMP(Simple Network Management Protocol) : SNMP protocol is used for monitoring and managing network devices. It provides  to collect and organize information about network devices such as routers, switches and servers and it helps to measure volume-based metrics. Where network administrators use SNMP to gather data on bandwidth usage and device health.
+
+6) IPFIX(Internet Protocol Flow Information Export) : This protocol is an open standard ,its design for collecting flow data , IPFIX collects traffic data based on flow records enabling the monitoring of traffic patterns and behaviours across a network. Where network administrators to understand traffic patterns , monitor network health and unauthorized access attempts.
+
+
+References:
+- **Tcpdump**: [Official Website](https://www.tcpdump.org/)
+- Deep Packet Inspection (DPI)**: [Overview](https://en.wikipedia.org/wiki/Deep_packet_inspection)
+- Protocol Analysis in Wireshark**: [Official Website](https://www.wireshark.org/)
+- SNMP (Simple Network Management Protocol)**: [RFC 1157](https://tools.ietf.org/html/rfc1157)
+- IPFIX (Internet Protocol Flow Information Export)**: [RFC 7011](https://tools.ietf.org/html/rfc7011)
