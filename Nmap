@@ -1,0 +1,53 @@
+Overview : Nmap scans various open ports , services , and potential vulnerabilities associated with the website(www.testfire.net). This website runs on multiple ports(80, 433, 8080, 5000) with several vulnerabilities.
+Version and Scanning Details:
+Nmap Version:7.93
+Scan Date:2025-01-16
+Target : www.testfire.net
+IP Address: 65.61.137.117
+Scan: Service Detection, Vulnerability Scanning, and Nmap Scripts
+
+Port scanning result:
+Open Ports : 
+80/tcp (HTTP).
+ 443/tcp (HTTPS)
+8080/tcp (HTTP Proxy)
+5000/tcp (HTTP)
+997 TCP ports( This port is not respond)
+
+ 
+
+Service Versions Detected:
+•	FTP: vsftpd 3.0.3
+•	SSH: OpenSSH 7.6 (protocol 2.0)
+•	HTTP/HTTPS: Apache 2.4.18
+
+
+Vulnerability Scanning Report : 
+Vulnerability scanning identify slowloris DoS attack, weak in the SSL/TLS configuration and website having CSRF vulnerabilities in several forms.
+
+•	Slowloris DoS Attack (CVE-2007-6750) : 
+State : LIKELY VULNERABILITY
+  Port Affected: 80 (HTTP)
+        Severity: Critical
+      
+  The target is susceptible to the Slowloris Denial of Service (DoS) attack, where the attacker keeps many connections open and sends partial requests, exhausting server resources.
+
+
+•	Weak Diffie-Hellman Key Exchange
+                  Port Affected: 443 (HTTPS)
+                  Severity: High
+                 The SSL/TLS configuration uses a weak 1024-bit Diffie-Hellman key exchange. This is vulnerable to passive eavesdropping attacks, especially when using weakly generated groups.
+
+ Cross-Site Request Forgery (CSRF) Vulnerabilities
+•	Severity: Medium
+            The scan identified several forms across the site (e.g., frmsearch, search.jsp) that are susceptible to CSRF attacks. These forms can be abused by attackers to submit unauthorized requests on behalf of a logged-in user.
+
+ 
+ 
+ 
+ 
+
+
+
+
+
